@@ -26,7 +26,9 @@ export default function LoginPage() {
         }
         if(username.length < 4) {
             setUsernameErr(true)
-        } else setUsernameErr(false)
+        } else {
+            setUsernameErr(false)
+        }
         if(password.length >= 8 && username.length >= 4) {
             navigate(`/chat/${username}`, {replace: true });
         }
